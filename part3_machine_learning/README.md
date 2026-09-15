@@ -1,9 +1,9 @@
 # Part 3 — Machine Learning and AI: Building an Intelligent Mobility Solution
 
 ## Accident dataset statement
-**No real accident dataset was sourced or used.** As instructed in the
-capstone brief, a **documented proxy accident-risk label** (`high_risk`) was
-constructed from `congestion_category` (data-driven quartiles of
+**No real accident dataset was sourced or used.** Instead, a **documented
+proxy accident-risk label** (`high_risk`) was constructed from
+`congestion_category` (data-driven quartiles of
 `traffic_volume`) combined with severe/low-visibility weather — see
 `scripts/common.py::add_proxy_accident_risk_label` for the exact logic, and
 `responsible_ai_report.md` for the risks of over-interpreting this proxy as
