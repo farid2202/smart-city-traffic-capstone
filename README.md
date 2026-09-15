@@ -1,0 +1,38 @@
+# Smart City Traffic Intelligence: From Data Analytics to AI-Powered Mobility
+
+Capstone project — AI, ML and Data Science programme. Three connected parts
+analysing and building AI solutions on the Metro Interstate Traffic Volume
+dataset (westbound I-94, Minneapolis-St Paul).
+
+## Start here
+- **`final_capstone_report.md`** — methodology and findings across all three parts.
+
+## Structure
+```
+smart-city-traffic-capstone/
+├── Metro_Interstate_Traffic_Volume.csv
+├── requirements.txt
+├── part1_data_analytics/    # SQL, statistics, probability, Power BI dashboard, insights report
+├── part2_python/            # cleaning pipeline, feature engineering, viz, CLI app
+├── part3_machine_learning/  # supervised/unsupervised ML, deep learning, MLOps, recommender
+└── final_capstone_report.md
+```
+
+## Setup
+```bash
+python -m venv venv && source venv/bin/activate   # optional but recommended
+pip install -r requirements.txt
+```
+
+## Running each part
+- **Part 1:** `python part1_data_analytics/sql/run_sql_analysis.py`, then
+  `descriptive_stats.py` and `probability_analysis.py` in
+  `part1_data_analytics/statistics/`. Power BI dashboard:
+  `part1_data_analytics/powerbi/traffic_dashboard.pbix`.
+- **Part 2:** `cd part2_python && python main.py` (runs the full pipeline
+  end-to-end). CLI app: `cd cli_app && python app.py --help`.
+- **Part 3:** see `part3_machine_learning/README.md` for the full run order.
+
+## Git history
+This repository was built with incremental, descriptively-named commits per
+task (`git log --oneline`) rather than one final commit.

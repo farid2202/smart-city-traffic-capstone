@@ -4,8 +4,11 @@
 ```
 part2_python/
 ├── pipeline.py                # Task 1: load, validate schema, clean the raw CSV
+├── pipeline.ipynb              # Notebook walkthrough of pipeline.py (same functions, step by step)
 ├── feature_engineering.py     # Task 2: time/weather/scaled/congestion features
+├── feature_engineering.ipynb   # Notebook walkthrough of feature_engineering.py
 ├── visualizations.py          # Task 3: 4 Matplotlib charts -> figures/
+├── visualizations.ipynb        # Notebook walkthrough of visualizations.py, with figures shown inline
 ├── main.py                    # Runs all three of the above end-to-end, one shared log
 ├── cli_app/
 │   └── app.py                 # Task 4: mini command-line analytics application
@@ -51,6 +54,14 @@ python app.py compare-weekday-weekend
 python app.py recommend-travel --day-type weekend
 ```
 
+**Notebook versions** (`pipeline.ipynb`, `feature_engineering.ipynb`,
+`visualizations.ipynb`) are optional companions for viewing each stage
+interactively in Jupyter — they import and call the exact same functions as
+the `.py` files (nothing is re-implemented), already executed with outputs
+inline. `main.py` and `cli_app/app.py` still import from the `.py` files
+directly, so those remain the scripts that actually run this pipeline
+end-to-end; the notebooks are for walking through *how* each stage works.
+
 ## Logging configuration
 
 All logging is configured in exactly one place: `configure_logging()` in
@@ -82,8 +93,8 @@ project's* events rather than library internals.
 
 `print()` is never used for internal status — only `cli_app/app.py` uses it,
 and only for the actual answer to a user's command (e.g. printing the
-requested traffic figures), which is the one case the assignment brief
-explicitly allows.
+requested traffic figures), which is the appropriate use of `print()` in a
+CLI tool: it's user-facing output, not an internal log event.
 
 ## Data cleaning summary (see `pipeline.log` / `report.md` for full detail)
 - 1,730 rows had inconsistent `weather_description` casing, standardised to lowercase.
