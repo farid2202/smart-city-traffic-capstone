@@ -2,9 +2,9 @@
 common.py — shared feature set and proxy-label construction for Part 3
 ==========================================================================
 Reuses the cleaned + featured dataset produced in Part 2 (extends it rather
-than re-deriving it from scratch), and builds the proxy accident-risk label
-described in the capstone instructions (no real accident dataset was
-provided for this project).
+than re-deriving it from scratch), and builds a documented proxy
+accident-risk label, since no real accident dataset was available for
+this project.
 
 Every Part 3 script imports FEATURE_COLUMNS from here so all models are
 compared on exactly the same, consistently-built feature set.
@@ -63,7 +63,7 @@ def load_features(path: Path = PART2_FEATURED_CSV) -> pd.DataFrame:
 def add_proxy_accident_risk_label(df: pd.DataFrame) -> pd.DataFrame:
     """A record is HIGH RISK when high/severe congestion co-occurs with
     severe or low-visibility weather. This proxy is intended only to
-    demonstrate the ML classification workflow described in the brief and
+    demonstrate an ML classification workflow on this dataset and
     is NOT a real prediction of accident likelihood — see
     responsible_ai_report.md for the documented risk of using it as such."""
     df = df.copy()

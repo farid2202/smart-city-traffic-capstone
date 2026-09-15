@@ -4,7 +4,7 @@ recommender.py — Part 3, Task 5: Traffic Recommendation System
 Transforms the Part 3 Task 1 regression model's OUTPUTS into a practical
 travel-timing recommendation system. Because the dataset represents a single
 corridor (westbound I-94), this focuses on WHEN to travel, not which route
-to take, exactly as scoped in the capstone brief.
+to take.
 
 For a given day type, weather condition and holiday status, the trained
 GradientBoostingRegressor model predicts traffic volume for every hour of

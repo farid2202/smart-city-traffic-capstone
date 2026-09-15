@@ -17,7 +17,13 @@ part3_machine_learning/
 │   ├── supervised_ml.py                # Task 1: classification + regression
 │   ├── unsupervised_ml.py              # Task 2: k-means + association rules
 │   └── deep_learning_explainability.py # Task 3: LSTM + SHAP
-├── notebooks/                          # executed .ipynb versions of the 3 scripts above, + figures/
+├── notebooks/                          # executed .ipynb companions to every script below, + figures/
+│   ├── 01_supervised_ml.ipynb
+│   ├── 02_unsupervised_ml.ipynb
+│   ├── 03_deep_learning_explainability.ipynb
+│   ├── 04_model_versioning.ipynb
+│   ├── 05_monitoring.ipynb
+│   └── 06_recommendation_system.ipynb
 ├── models/                             # saved .joblib / .keras model files
 ├── mlflow/mlflow.db                    # MLflow tracking store (Task 4)
 ├── advanced_ai_technique.md            # Task 4 write-up
@@ -39,8 +45,9 @@ python monitoring/monitor.py
 python recommendation_system/recommender.py --day-type weekday --weather Clear
 cd deployment && uvicorn api:app --reload --port 8000   # then POST to /predict/volume or /predict/risk
 ```
-Or open the pre-executed notebooks in `notebooks/` to see all outputs without
-re-running anything (each has its outputs saved from the last run).
+Or open the pre-executed notebooks in `notebooks/` to see all outputs —
+including charts not printed by the scripts themselves — without re-running
+anything (each has its outputs saved from the last run).
 
 ## Reused from earlier parts
 Every script here loads `part2_python/featured_traffic_data.csv` (Part 2's

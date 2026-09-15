@@ -1,16 +1,15 @@
 # %% [markdown]
 # # Part 3, Task 3 — Deep Learning with Explainability
 #
-# Traffic volume is naturally sequential data, so an **LSTM** is used
-# (recommended in the brief for exactly this reason) to predict the next
-# hour's traffic volume from the previous 24 hours.
+# Traffic volume is naturally sequential data, so an **LSTM** is used to
+# predict the next hour's traffic volume from the previous 24 hours.
 #
 # LSTMs are not directly compatible with the standard SHAP tabular
 # explainers (a 3-D sequence input doesn't map onto SHAP's TreeExplainer /
 # LinearExplainer, and DeepExplainer's attributions for a sequence model are
 # far less intuitive to communicate to a non-technical stakeholder than a
-# feature-importance bar chart). As the brief explicitly allows, **SHAP is
-# instead applied to a comparable tree-based model** — a Random Forest
+# feature-importance bar chart), so **SHAP is instead applied to a
+# comparable tree-based model** — a Random Forest
 # trained on an equivalent *lagged-feature* representation of the exact same
 # prediction problem (predict next-hour volume from the previous 24 hours,
 # just expressed as 24 separate lag columns instead of a sequence tensor).

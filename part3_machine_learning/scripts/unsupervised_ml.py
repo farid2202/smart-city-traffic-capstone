@@ -1,7 +1,7 @@
 # %% [markdown]
 # # Part 3, Task 2 — Unsupervised Machine Learning
 #
-# No accident dataset is available, so per the capstone brief we instead:
+# No accident dataset is available, so instead:
 # - **K-means**: cluster *traffic conditions* themselves (hour, weather
 #   severity, traffic volume) and interpret what each cluster represents.
 # - **Association rule mining**: discretise time-of-day, weekday type and

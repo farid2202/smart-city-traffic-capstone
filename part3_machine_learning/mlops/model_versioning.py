@@ -24,7 +24,11 @@ REPORT_PATH = Path(__file__).resolve().parent / "model_versioning.md" if "__file
     else Path.cwd() / "model_versioning.md"
 
 
-def main() -> int:
+def build_comparison_table() -> pd.DataFrame:
+    """Pulls every run logged across all Part 3 MLflow experiments and
+    returns one tidy comparison table — the single source both `main()`
+    and the companion notebook build on, so the table is never computed
+    two different ways."""
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 
     all_runs = []
@@ -43,6 +47,11 @@ def main() -> int:
     table.columns = [c.replace("metrics.", "").replace("params.", "").replace("tags.mlflow.runName", "run_name")
                       for c in table.columns]
     table = table.sort_values(["experiment", "run_name"])
+    return table
+
+
+def main() -> int:
+    table = build_comparison_table()
 
     lines = [
         "# Part 3, Task 6.1 — Model Versioning\n",
@@ -67,7 +76,7 @@ def main() -> int:
         "two selected candidates above.",
     ]
     report = "\n".join(lines)
-    REPORT_PATH.write_text(report)
+    REPORT_PATH.write_text(report, encoding="utf-8")
     print(report)
     print(f"\nSaved to {REPORT_PATH}")
     return 0
