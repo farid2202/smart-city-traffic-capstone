@@ -5,7 +5,7 @@ analysing and building AI solutions on the Metro Interstate Traffic Volume
 dataset (westbound I-94, Minneapolis-St Paul).
 
 ## Start here
-- **`final_capstone_report.pdf`** — methodology and findings across all three parts.
+- **`final_capstone_report.md`** — methodology and findings across all three parts.
 
 ## Structure
 ```
@@ -19,8 +19,16 @@ smart-city-traffic-capstone/
 ```
 
 ## Setup
+Requires **Python 3.10–3.12**. TensorFlow (used in Part 3's LSTM model) does
+not yet publish wheels for Python 3.13+, so creating the environment with a
+newer default Python will fail partway through `pip install -r requirements.txt`
+when it reaches `tensorflow`. Run `py -0p` (Windows) to see which Python
+versions are installed and pick a 3.10–3.12 one if your default is newer.
+
 ```bash
-python -m venv venv && source venv/bin/activate   # optional but recommended
+python -m venv venv              # or: py -3.11 -m venv venv
+source venv/bin/activate         # macOS/Linux
+venv\Scripts\activate            # Windows (cmd or PowerShell)
 pip install -r requirements.txt
 ```
 
