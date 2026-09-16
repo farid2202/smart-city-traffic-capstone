@@ -16,7 +16,7 @@ part2_python/
 ├── cleaned_traffic_data.csv   # Output of pipeline.py
 ├── featured_traffic_data.csv  # Output of feature_engineering.py
 ├── pipeline.log               # Sample log from a full main.py run
-├── report.md                  # Methodology and findings (1-2 pages)
+├── report.pdf                  # Methodology and findings (1-2 pages)
 └── README.md                  # This file
 ```
 

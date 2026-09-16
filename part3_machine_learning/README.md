@@ -26,12 +26,12 @@ part3_machine_learning/
 │   └── 06_recommendation_system.ipynb
 ├── models/                             # saved .joblib / .keras model files
 ├── mlflow/mlflow.db                    # MLflow tracking store (Task 4)
-├── advanced_ai_technique.md            # Task 4 write-up
+├── advanced_ai_technique.pdf            # Task 4 write-up
 ├── recommendation_system/recommender.py  # Task 5
 ├── mlops/                              # Task 6.1-6.2: model_versioning.py/.md, README.md
 ├── deployment/api.py                   # Task 6.3: FastAPI deployment simulation
 ├── monitoring/monitor.py               # Task 6.4-6.5: drift monitoring + alerting
-└── responsible_ai_report.md            # Task 7
+└── responsible_ai_report.pdf            # Task 7
 ```
 
 ## How to run everything, in order

@@ -40,11 +40,11 @@ No features exceeded the drift threshold.
 
 ## Interpretation
 
-No meaningful drift detected — the model's input feature distributions and prediction error are stable across the test period. No retraining action needed at this time.
+No meaningful drift detected â€” the model's input feature distributions and prediction error are stable across the test period. No retraining action needed at this time.
 
 ## Appendix: ALERT-path demonstration (synthetic data)
 
-The monitoring run above came back PASS because the real test period isn't actually drifted. To demonstrate the alerting mechanism itself works, this section re-runs the identical KS-test check against a **synthetically perturbed** copy of the test set (severe-weather rate artificially inflated) — this is a deliberate demonstration, not a claim about the real data.
+The monitoring run above came back PASS because the real test period isn't actually drifted. To demonstrate the alerting mechanism itself works, this section re-runs the identical KS-test check against a **synthetically perturbed** copy of the test set (severe-weather rate artificially inflated) â€” this is a deliberate demonstration, not a claim about the real data.
 
 | feature              |   ks_statistic |   p_value | status   |
 |:---------------------|---------------:|----------:|:---------|
