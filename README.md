@@ -5,7 +5,7 @@ analysing and building AI solutions on the Metro Interstate Traffic Volume
 dataset (westbound I-94, Minneapolis-St Paul).
 
 ## Start here
-- **`final_capstone_report.md`** — methodology and findings across all three parts.
+- **`final_capstone_report.pdf`** — methodology and findings across all three parts.
 
 ## Structure
 ```
