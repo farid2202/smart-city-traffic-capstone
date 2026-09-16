@@ -15,7 +15,7 @@ smart-city-traffic-capstone/
 ├── part1_data_analytics/    # SQL, statistics, probability, Power BI dashboard, insights report
 ├── part2_python/            # cleaning pipeline, feature engineering, viz, CLI app
 ├── part3_machine_learning/  # supervised/unsupervised ML, deep learning, MLOps, recommender
-└── final_capstone_report.md
+└── final_capstone_report.pdf
 ```
 
 ## Setup
